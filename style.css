@@ -1,14 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box
 }
 
 
 
 body {
-  background-color: black
+  background-color: #18082e
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 .font-inter {
@@ -23,43 +24,49 @@ body {
 header {
   border-bottom: 1px solid #412567;
   background-color: #1A0B2E;
-  
+
 }
 
 nav {
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0px auto;
-    align-items: center;
-    padding: 18px 0px 18px 0px ;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0px auto;
+  align-items: center;
+  padding: 18px 0px 18px 0px;
 }
+
 nav .logo {
   color: #FFFFFF;
   font-size: 45px;
   font-weight: bold;
 }
+
 .logo span {
-  background:var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+  background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
   background-clip: text;
   color: transparent;
 }
+
 .menu {
-    list-style: none;
-    gap: 32px;
+  list-style: none;
+  gap: 32px;
 }
+
 .menu li a {
-    text-decoration: none;
-    font-size: 16px;
-    color: #FFFFFF;
-    line-height: 120%;
-    opacity: 90%;
-    font-weight: medium;
+  text-decoration: none;
+  font-size: 16px;
+  color: #FFFFFF;
+  line-height: 120%;
+  opacity: 90%;
+  font-weight: medium;
 }
+
 .menu-bar {
   display: none;
 }
+
 .btn {
-  background:var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1),rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+  background: var(--Linear, linear-gradient(47.64deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
   padding: 12px 16px;
   border-radius: 50px;
   border: none;
@@ -68,28 +75,171 @@ nav .logo {
   color: #FFFFFF;
   cursor: pointer;
 }
-.btn i {
+
+.nav-btn i {
   margin-left: 8px;
 }
+
 .btn:hover {
-  background:var(--Linear, linear-gradient(90deg,rgba(251, 9, 180, 1),rgba(145, 0, 248, 1)));
+  background: var(--Linear, linear-gradient(90deg, rgba(251, 9, 180, 1), rgba(145, 0, 248, 1)));
   color: #FFFFFF;
 }
+
+/* hero section */
+.hero {
+  background: url("./assets/hero-bg.png");
+  background-position: center;
+  padding: 120px 20px;
+  text-align: center;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+}
+
+.podcast-circle {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  margin: 0px auto;
+}
+
+.podcast-circle img:first-child {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.mic-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.badge {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  background: #00ff99;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0px 3px 27px 0 #00ff887e;
+}
+
+.hero-title {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #FFFFFF;
+  margin-top: 40px;
+  /* line-height: 120%; */
+  padding-bottom: 8px;
+  background: linear-gradient(120deg,
+      #ffffff 30%,
+      #ffffff 45%,
+      rgba(255, 255, 255, 0.3) 50%,
+      #ffffff 55%,
+      #ffffff 70%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 5s linear infinite;
+}
+
+@keyframes shine {
+  from {
+    background-position: 200% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+.hero-description {
+  font-size: 16px;
+  color: #ffffffcc;
+  margin-bottom: 24px;
+}
+
+.hero-btn1 i,
+.hero-btn2 i {
+  margin-right: 8px;
+}
+
+.hero-btn1 {
+  margin-right: 8px;
+}
+
+.hero-btn2 {
+  background-color: transparent;
+  padding: 12px 16px;
+  border-radius: 50px;
+  border: 1px solid #00FF88;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00FF88;
+  cursor: pointer;
+}
+
+
 
 @media (max-width: 576px) {
   nav {
     padding: 1.5vw 5vw;
   }
+
   nav .logo {
     font-size: 30px;
   }
-  .menu, .nav-btn {
-    display:none;
+
+  .menu,
+  .nav-btn {
+    display: none;
   }
+
   .menu-bar {
     display: flex;
     color: #FFFFFF;
     font-size: 20px;
   }
-  
+
+  .hero {
+    background: url("./assets/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #18082e;
+    padding: 1px 0px;
+    margin-top: 50px;
+
+  }
+
+  .podcast-circle {
+    width: 44vw;
+    height: 44vw;
+    margin: 0px auto;
+    position: relative;
+    top: -14px;
+  }
+
+  .mic-icon {
+    width: 10vw;
+  }
+
+  .badge {
+    top: 1.980vw;
+    right: 2.520vw;
+    padding: 0.1 0.220x;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .hero-title {
+    font-size: 10vw;
+    margin-top: 2.4vw;
+  }
+
 }
