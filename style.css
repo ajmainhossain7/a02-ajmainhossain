@@ -314,7 +314,149 @@ nav .logo {
   opacity: 60%;
 }
 
+/* feature section  */
+.feature {
+  margin: 120px auto;
+}
 
+/* episode section */
+
+.episode {
+  max-width: 1200px;
+  margin: 120px auto;
+  padding: 0px 20px;
+}
+
+.episode-title, .feature-title, .host-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #FFFFFF;
+  padding-bottom: 40px;
+}
+
+.episode-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.episode-card {
+  text-decoration: none;
+  color: inherit;
+  background-color: #3511655f;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.episode-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px #0000006a;
+}
+
+.thumb {
+  position: relative;
+}
+
+.thumb img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.play-btn {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.play-btn i {
+  font-size: 26px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(45deg, #ff00cc, #ffcc00);
+  color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.content {
+  padding: 24px;
+}
+
+.content h4 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  opacity: 60%;
+  margin-bottom: 12px;
+}
+
+.duration {
+  font-size: 16px;
+  color: #00ff9d;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+/* host sectiom */
+.host{
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+.host-container {
+  display: flex;
+  gap: 24px;
+  padding: 40px;
+  background-color: #3511655f;
+  border-radius: 35px;
+}
+
+.host-text {
+  padding: 8px;
+}
+.host-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+.host-description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  opacity: 60%;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+.social-links{
+  display: flex;
+  gap: 8px;
+}
+.social-links a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-decoration: none;
+  border: 2px solid #5330849f;
+  transition: all 0.35s ease;
+}
 
 
 @media (max-width: 576px) {
@@ -434,4 +576,38 @@ nav .logo {
       "card-4"
       "card-5"
   }
+
+  /* feature section */
+  .feature {
+    margin: 40px auto;
+  }
+  
+  /* episode section */
+  .episode-title {
+    font-size: 8vw;
+    padding-bottom: 5vw;
+  }
+  .episode-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .episode {
+    margin: 40px auto;
+  }
+  .host-title {
+    font-size: 8vw;
+    padding-bottom: 5vw;
+  
+  }
+  .host-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .host-name {
+    font-size: 7vw;
+  }
+  .social-links {
+    justify-content: center;
+  }
+
 }
