@@ -458,6 +458,12 @@ nav .logo {
   color: #FFFFFF;
 }
 
+
+.host-img img {
+  width: 200px;
+  border-radius:50%;
+}
+
 .host-description {
   font-size: 16px;
   line-height: 24px;
